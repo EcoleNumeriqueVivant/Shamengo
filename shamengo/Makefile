@@ -1,3 +1,6 @@
+USERNAME:=joe
+EMAIL:=joe@email.com 
+
 install:
 	pip3 install django
 
@@ -7,7 +10,10 @@ migrate:
 serve:
 	python3 manage.py runserver
 
-db:
+db-console:
 	sqlite3 db.sqlite3
 
-.PHONY: serve migrate install
+create-superuser:
+	python3 manage.py createsuperuser --username=${USERNAME} --email=${EMAIL}
+
+.PHONY: serve migrate install db-console create-superuser
