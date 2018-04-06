@@ -10,4 +10,7 @@ serve:
 db:
 	sqlite3 db.sqlite3
 
+shell:
+	python3 manage.py shell
+
 .PHONY: serve migrate install
