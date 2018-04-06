@@ -9,6 +9,6 @@ Dependencies
 
 Resources
 ---------
-[Python 3 Doc](https://docs.python.org/fr/3/)
-[Django Doc](https://docs.djangoproject.com/fr/2.0/)
-[MySQL](https://dev.mysql.com/doc/)
+[Python 3 Doc](https://docs.python.org/fr/3/)\n
+[Django Doc](https://docs.djangoproject.com/fr/2.0/)\n
+[MySQL](https://dev.mysql.com/doc/)\n
