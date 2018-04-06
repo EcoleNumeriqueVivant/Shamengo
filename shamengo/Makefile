@@ -7,4 +7,7 @@ migrate:
 serve:
 	python3 manage.py runserver
 
-.PHONY: serve
+db:
+	sqlite3 db.sqlite3
+
+.PHONY: serve migrate install
