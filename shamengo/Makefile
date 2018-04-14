@@ -6,7 +6,7 @@ install-yarn:
 
 dependencies:
 	yarn install
-	bower install
+	yarn add bower
 
 migrate:
 	python3 manage.py migrate
