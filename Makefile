@@ -1,3 +1,7 @@
+DJANGO_SETTINGS_MODULE:=shamengo.settings.dev
+
+export DJANGO_SETTINGS_MODULE 
+
 install:
 	pip3 install django
 
@@ -19,6 +23,5 @@ db:
 
 shell:
 	python3 manage.py shell
-
 
 .PHONY: serve migrate install
