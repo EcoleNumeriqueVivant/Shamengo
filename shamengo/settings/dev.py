@@ -54,7 +54,7 @@ ROOT_URLCONF = 'shamengo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,7 +116,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD:shamengo/settings.py
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+=======
 STATIC_ROOT = "./static/"
+>>>>>>> 1445fc4a076b968fc82a79be2af088e63c35e2ba:shamengo/settings/dev.py

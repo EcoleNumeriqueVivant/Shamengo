@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+
+dj-database-url==0.5.0
+
+Django==2.0.4
+django-bower==5.2.0
+django-scheduler==0.8.8
+gunicorn==19.7.1
+psycopg2==2.7.4
+sqlparse-0.2.4
+=======
 django==2.0.2
 gunicorn
 whitenoise
@@ -5,3 +16,4 @@ whitenoise
 psycopg2
 psycopg2-binary
 dj-database-url
+>>>>>>> 1445fc4a076b968fc82a79be2af088e63c35e2ba

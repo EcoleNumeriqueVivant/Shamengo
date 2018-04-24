@@ -24,4 +24,11 @@ db:
 shell:
 	python3 manage.py shell
 
+<<<<<<< HEAD
+herokumigrate:
+	heroku run python3 manage.py migrate
+
+
+=======
+>>>>>>> 1445fc4a076b968fc82a79be2af088e63c35e2ba
 .PHONY: serve migrate install
