@@ -1,20 +1,27 @@
-{% load static %}
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+{% load i18n static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}" xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>{% if site_name %}{{ site_name }} : {% endif %}{% block head_title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static "vendor/bootstrap/dist/css/bootstrap.css" %}" type="text/css" media="screen">
+        <script type="text/javascript" src="{% static "vendor/jquery/dist/jquery.js" %}"></script>
+        <script type="text/javascript" src="{% static "vendor/jquery-ui/jquery-ui.min.js" %}"></script>
+        <script type="text/javascript" src="{% static "vendor/bootstrap/dist/js/bootstrap.js" %}"></script>
+        <script type="text/javascript" src="{% static "schedule.js" %}"></script>
+        <link rel="stylesheet" href="{% static "schedule.css" %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static "vendor/jquery-ui/themes/base/all.css" %}" type="text/css" media="screen">
+        {% block extra_head %}
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% endblock %}
+    </head>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <title>Shamengo</title>
-  </head>
+    <body>
 
-  <body>
     <div>
       <nav class="navbar navbar-white bg-white">
        <img src="{% static 'img/logo_shamengo.png' %}" alt="logo.jpg" height="50"/>
+       <h1>Bienvenue sur le site des évènements Shamengo Toulouse</h1>
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <button type="button" class="btn btn-light"> Sign Up</button>
@@ -25,16 +32,26 @@
       </nav>
     </div>
 
-    <div>
-      {% block content %}
+    <p style="clear:both">
 
-      {% endblock%}
-    </div>
+        <div id="body">
+            {% if messages %}
+                <ul id="messages">
+                    {% for message in messages %}
+                    <li id="message_{{ forloop.counter }}"><a href="#" onclick="$('#message_{{ forloop.counter }}').fadeOut(); return false;"><small>{% trans "clear" %}</small></a> {{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-  </body>
+            {% block body %}
+            {% endblock %}
+
+        </div>
+
+        <div id="footer">{% block footer %}{% endblock %}</div>
+
+    </body>
 </html>
+
+
+
