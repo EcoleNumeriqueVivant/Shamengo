@@ -1,6 +1,6 @@
 DJANGO_SETTINGS_MODULE:=shamengo.settings.dev
 
-export DJANGO_SETTINGS_MODULE 
+export DJANGO_SETTINGS_MODULE
 
 install:
 	pip3 install django
@@ -14,6 +14,9 @@ dependencies:
 
 migrate:
 	python3 manage.py migrate
+
+makemigrations:
+	python3 manage.py makemigrations
 
 serve:
 	python3 manage.py runserver
