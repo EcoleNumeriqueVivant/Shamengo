@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'l=i7kqr$tr-(k-wnqvj90q$zfvq*h^3sjs1o#bpg!%0np@n@#u'
+SECRET_KEY = 'h955a=&z9lnk_c#umv@1_+so(kld#23p7c48j=c@cc$ard03!v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -122,5 +122,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'scheduler/static'),
 ]
-
-INTERNAL_IPS = ['127.0.0.1']
