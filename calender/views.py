@@ -1,5 +1,7 @@
 from django.shortcuts import render
+from .models import Entry
 
 
 def index(request):
-	return render(request, 'calender/index.html')
+	entries = Entry.objects.all()
+	return render(request, 'calender/index.html', {'entries': entries})
