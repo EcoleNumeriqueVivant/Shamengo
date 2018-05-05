@@ -1,5 +1,5 @@
 from django.contrib import admin
 
-from .models import Entry
+from scheduler.models import Entry
 
 admin.site.register(Entry)
