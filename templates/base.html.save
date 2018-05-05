@@ -16,8 +16,7 @@
       <nav class="navbar navbar-white bg-white">
        <img src="{% static 'img/logo_shamengo.png' %}" alt="logo.jpg" height="50"/>
         <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <button type="button" class="btn btn-light"> Sign Up</button>
+          
           <li class="nav-item">
             <button type="button" class="btn btn-light"> <a href= "/admin"> Log In</button></a>
           </li>

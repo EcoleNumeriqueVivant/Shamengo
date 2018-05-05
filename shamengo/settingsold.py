@@ -34,8 +34,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #'schedule',
+    #'djangobower',
     'calender',
-
 ]
 
 MIDDLEWARE = [
@@ -117,8 +118,14 @@ STATICFILES_DIRS = [
 #	'djangobower.finders.BowerFinder',
 #]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'jquery-ui',
+    'bootstrap'
+)
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+
+BOWER_COMPONENTS_ROOT = '/Users/ben/Desktop/SHAMENGO/Shamengo-arnaud/Shamengo/components/'
+
+
