@@ -1,3 +1,18 @@
+
+from django.contrib import admin
+from django.urls import include, path
+from calender import views
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('entry/<int:pk>', views.details, name='details'),
+]
+
+
+
+
 """shamengo URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -17,14 +32,3 @@ Including another URLconf
        url(r'^$', views.home),
 
 """
-from django.contrib import admin
-from django.conf.urls import url
-#from . import views
-from calender import views
-
-
-urlpatterns = [
-    url(r'admin/', admin.site.urls),
-    url('', views.index),
-    #url(r'^$', views.home),
-]
