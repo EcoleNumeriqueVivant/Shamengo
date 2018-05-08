@@ -4,7 +4,7 @@
 <div class="container">
   <h1>{{entry.name}}</h1>
   <hr/>
-  <h5>{{entry.date}}</h5>
-  <p>{{description}}</p>
+  <h5>{{ entry.date|date:"d m Y"}}</h5>
+  <p>{{entry.description}}</p>
 </div>
 {% endblock %}

@@ -3,7 +3,12 @@ from scheduler.models import Entry
 
 def index(request):
     entries = Entry.objects.all()
-    return render(request,'scheduler.html', {'entries': entries})
+    return render(request,'index.html')
+
+def calender(request):
+    entries = Entry.objects.all()
+    return render(request,'calender.html', {'entries': entries})
 
 def details(request, pk):
-    return render (request, 'details.html')
+    entry = Entry.objects.get(id=pk)
+    return render (request, 'details.html', {'entry': entry})
