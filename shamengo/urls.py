@@ -18,6 +18,7 @@ from django.urls import path
 from scheduler import views
 
 urlpatterns = [
-    path('', views.index),
-    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('entry/<int:pk>', views.details, name='details'),
+    path('admin/', admin.site.urls, name='admin'),
 ]

@@ -17,3 +17,6 @@ class Entry(models.Model):
     description = models.TextField()
     category = models.CharField(max_length=2 , choices=CATEGORY)
     created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
