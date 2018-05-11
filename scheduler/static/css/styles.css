@@ -1,7 +1,121 @@
-.calendar_entry{
-  background-color: #abc;
-  margin: 15px;
+body{
+  background-color: #E7E7E7
 }
-.page-center{
-  margin: auto;
+.container{
+  margin-top: 20px;
+}
+.card {
+  height: 175px;
+
+  background-color: #FFF;
+  background-size: cover !important;
+  background-position: center;
+  color: black;
+  position: relative;
+  border-radius: 5px;
+  margin: 20px;
+}
+.card-date{
+  position: relative;
+  height: 175px;
+  width: 175px;
+  background-color: red;
+  border-radius: 5px;
+  margin: 20px;
+}
+.card-date h4{
+  position: absolute;
+  top: 16px;
+  left: 51px;
+  font-size: 37px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.card-categorys {
+  display:flex;
+  justify-content: space-around;
+  font-family: 'Open Sans', sans-serif;
+  background-color: red;
+}
+
+.card-description {
+  position: absolute;
+  top: 3em;
+  left: 6em;
+}
+.card-description h2 {
+  font-size: 24px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
+}
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+  font-family: 'Open Sans', sans-serif;
+}
+.card-button{
+  position: absolute;
+  top: 135px;
+  left: 426px;
+}
+.btn-treehouse{
+ color: #FFF;
+ padding: 1px 1px;
+ border-radius: 5px;
+ background: gray;
+ transition: background 0.3s ease;
+ font-family: 'Open Sans', sans-serif;
+ font-size: 12px;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #8DC548;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* details page */
+.details-container{
+  display: flex;
+}
+
+.details-card{
+  height: 175px;
+  width: 770px;
+  background-color: #FFF;
+  background-size: cover !important;
+  background-position: center;
+  color: black;
+  border-radius: 5px;
+  margin: 20px;
+  position: relative;
+
+}
+.details-card h1{
+  display: flex;
+  justify-content: center;
+}
+.details-card p{
+  position: absolute;
+  left: 33px;
+}
+.details-date-card{
+  position: relative;
+  height: 175px;
+  width: 175px;
+  background-color: red;
+  border-radius: 5px;
+  margin: 20px;
+}
+.details-date-card h5{
+  position: absolute;
+  top: 16px;
+  left: 51px;
+  font-size: 37px;
+  color: white;
+  font-weight: bold;
 }

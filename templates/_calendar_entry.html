@@ -1,7 +1,13 @@
-<div class="calendar_entry col-lg-4">
-  <br />
-  <h2>{{ entry.name }}</h2>
-  <h4>{{ entry.date|date:"d m Y"}}</h4>
-  <p>{{ entry.description|truncatechars:20}}</p>
-  <button onclick="window.location='{% url 'details' pk=entry.id %}'" classe="btn btn-primary"> Details</button>
+<div class="calendar_entry col-xs-12 col-sm-12">
+  <div class="card">
+    <div class="card-categorys">{{ entry.category }}</div>
+    <div class="card-date"><h4>{{ entry.date|date:"d M y"}}</h4></div>
+    <div class="card-description">
+      <h2>{{ entry.name }}</h2>
+      <p>{{ entry.description|truncatechars:20}}</p>
+    </div>
+    <div class="card-button">
+      <a onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn-treehouse">More info</a>
+    </div>
+  </div>
 </div>

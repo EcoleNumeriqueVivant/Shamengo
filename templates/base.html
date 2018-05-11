@@ -8,6 +8,7 @@
 
     <!-- Bootstrap / CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 
 
@@ -16,12 +17,12 @@
   <body>
     <!-- NavBar Config -->
     <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="{% url 'index' %}">
+      <a class="navbar-brand" href="{% url 'calendar' %}">
         Shamengo
       </a>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="navbar-brand" href="#">SignIn</a>
+          <a class="navbar-brand" href="/admin/login/">LogIn</a>
         </li>
       </ul>
     </nav>

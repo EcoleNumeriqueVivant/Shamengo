@@ -4,13 +4,13 @@ from django.db import models
 class Entry(models.Model):
 
     CATEGORY = (
-        ("A", "atelier"),
-        ("Co", "cocktail"),
-        ("C", "conference"),
+        ("Atelier", "atelier"),
+        ("Cocktail", "cocktail"),
+        ("Conference", "conference"),
         ("E", "evenement"),
-        ("M", "meetup"),
-        ("P", "projection"),
-        ("R", "reunion"),
+        ("Meetup", "meetup"),
+        ("Projection", "projection"),
+        ("Reunion", "reunion"),
     )
     name = models.CharField(max_length=100)
     date = models.DateTimeField()
