@@ -1,12 +1,13 @@
 body{
   background-color: #E7E7E7
 }
+
+/* calendar page */
 .container{
   margin-top: 20px;
 }
 .card {
   height: 175px;
-
   background-color: #FFF;
   background-size: cover !important;
   background-position: center;
@@ -16,12 +17,13 @@ body{
   margin: 20px;
 }
 .card-date{
+  display: flex;
   position: relative;
   height: 175px;
   width: 175px;
   background-color: red;
   border-radius: 5px;
-  margin: 20px;
+
 }
 .card-date h4{
   position: absolute;
@@ -35,18 +37,15 @@ body{
 }
 
 .card-categorys {
-  display:flex;
-  justify-content: space-around;
   font-family: 'Open Sans', sans-serif;
-  background-color: red;
 }
 
-.card-description {
+.card-info {
   position: absolute;
   top: 3em;
   left: 6em;
 }
-.card-description h2 {
+.card-name h2 {
   font-size: 24px;
   font-family: 'Titillium Web', sans-serif;
   font-weight: bold;

@@ -1,10 +1,18 @@
-<div class="calendar_entry col-xs-12 col-sm-12">
+<div class="calendar_entry col-xs-12 col-sm-6">
   <div class="card">
-    <div class="card-categorys">{{ entry.category }}</div>
-    <div class="card-date"><h4>{{ entry.date|date:"d M y"}}</h4></div>
-    <div class="card-description">
-      <h2>{{ entry.name }}</h2>
-      <p>{{ entry.description|truncatechars:20}}</p>
+    <div class="card-categorys">
+      <h4>{{ entry.category }}</h4>
+    </div>
+    <div class="card-date">
+      <h4>{{ entry.date|date:"d M y"}}</h4>
+    </div>
+    <div class="card-info">
+      <div class="card-name">
+        <h2>{{ entry.name }}</h2>
+      </div>
+      <div class="card-description">
+        <p>{{ entry.description|truncatechars:20}}</p>
+      </div>
     </div>
     <div class="card-button">
       <a onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn-treehouse">More info</a>
