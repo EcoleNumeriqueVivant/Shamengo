@@ -1,120 +1,111 @@
 body{
-  background-color: #E7E7E7
-}
-
-/* calendar page */
-.container{
-  margin-top: 20px;
+  background-color: #E7E7E7;
 }
 .card {
-  height: 175px;
-  background-color: #FFF;
-  background-size: cover !important;
-  background-position: center;
-  color: black;
-  position: relative;
-  border-radius: 5px;
-  margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 1, 0.2);
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-family: Titillium;
+    margin-top: .75rem;
+}
+.card-description{
+  color: darkgrey;
+  font-size: 12px;
+  font-family: Open-Sans;
+}
+.card-category{
+  /* background-color: #F0911C; */
+  background-color: #25BCED;
+  height: 100px;
 }
 .card-date{
-  display: flex;
-  position: relative;
-  height: 175px;
-  width: 175px;
-  background-color: red;
-  border-radius: 5px;
-
-}
-.card-date h4{
   position: absolute;
-  top: 16px;
-  left: 51px;
-  font-size: 37px;
+  top: 0;
+  left: 0;
+  background-color: #CCCC;
   color: white;
-  font-weight: bold;
-  font-family: 'Open Sans', sans-serif;
-
+  padding: 0.8em;
+  width: 89px;
+  height: 100px;
+  span {
+    display: block;
+    text-align: center;
+  }
 }
-
-.card-categorys {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.card-info {
-  position: absolute;
-  top: 3em;
-  left: 6em;
-}
-.card-name h2 {
+.day {
+  font-weight: 700;
   font-size: 24px;
-  font-family: 'Titillium Web', sans-serif;
-  font-weight: bold;
+  text-shadow: 2px 3px 2px rgba(black, 0.18);
 }
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
-  font-family: 'Open Sans', sans-serif;
+.month {
+  text-transform: uppercase;
 }
-.card-button{
+.mouth,.year {
+  font-size: 12px;
+}
+.card-info{
+  height: 200px;
+}
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #3A3A3A;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
   position: absolute;
-  top: 135px;
-  left: 426px;
+  left: 0;
+  bottom: 10px;
 }
-.btn-treehouse{
- color: #FFF;
- padding: 1px 1px;
- border-radius: 5px;
- background: gray;
- transition: background 0.3s ease;
- font-family: 'Open Sans', sans-serif;
- font-size: 12px;
-}
-.btn-treehouse:hover {
-  opacity: 1;
-  background: #8DC548;
-  text-decoration: none;
-  color: #FFF;
+
+button:hover, a:hover {
+    opacity: 0.9;
 }
 
 /* details page */
-.details-container{
-  display: flex;
-}
-
-.details-card{
-  height: 175px;
-  width: 770px;
-  background-color: #FFF;
-  background-size: cover !important;
-  background-position: center;
-  color: black;
-  border-radius: 5px;
-  margin: 20px;
-  position: relative;
-
-}
-.details-card h1{
-  display: flex;
-  justify-content: center;
-}
-.details-card p{
-  position: absolute;
-  left: 33px;
+.details {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 1, 0.2);
+    width: 500px;
+    height:auto;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    background-color: #FFFF;
 }
 .details-date-card{
-  position: relative;
-  height: 175px;
-  width: 175px;
-  background-color: red;
-  border-radius: 5px;
-  margin: 20px;
-}
-.details-date-card h5{
-  position: absolute;
-  top: 16px;
-  left: 51px;
-  font-size: 37px;
+  background-color: #778899;
   color: white;
-  font-weight: bold;
+  padding: 0.8em;
+  font-size: 24px;
+  text-shadow: 2px 3px 2px rgba(black, 0.18);
+  font-weight: 400;
+}
+.details-card{
+  font-family: Titillium;
+  font-size: 18px;
+  background-color: #FFFF;
+  margin-top: 18px;
+}
+.details-card h3{
+  font-size: 24px;
+
+}
+.details-description{
+  font-family: Open-sens;
+  font-size: 14px;
+  padding: 3px;
+  margin: 5px;
 }

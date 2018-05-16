@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from scheduler.models import Entry
+from scheduler.models import Entry, Category
 
 # def index(request):
 #     entries = Entry.objects.all()

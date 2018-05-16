@@ -1,14 +1,16 @@
 {% extends 'base.html'%}
 
 {% block content%}
-<div class="details-container col-xs-12 ">
+<div class="details col-xs-12 ">
   <div class="details-date-card">
     <h5>{{ entry.date|date:"d M Y"}}</h5>
   </div>
   <div class="details-card">
-    <h1>{{entry.name}}</h1>
+    <h3>{{entry.name}}</h3>
     <hr/>
-    <p>{{entry.description}}</p>
+    <div class="details-description">
+      <p>{{entry.description}}</p>
+    </div>
   </div>
 </div>
 {% endblock %}
