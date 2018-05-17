@@ -1,8 +1,23 @@
 {% extends 'calender/base.html' %}
+{% load static %}
 
 {% block content %}
 <div class="container jumbotron">
-	<button onclick="window.location='{% url 'index' %}'" class="btn btn-default">Back</button>
+	<button onclick="window.location='{% url 'index' %}'" class="btn btn-outline-primary btn-sm">Back</button>
+	
+ 				{% if entry.Sante == True %}
+ 				<img src="{% static 'img/blue.png' %}" alt="Sante" height="20"/>
+ 				{% endif %}	
+				{% if entry.Environnement == True %}
+				<img src="{% static 'img/green.png' %}" alt="Environnement" height="20"/>
+				{% endif %}	
+				{% if entry.Travail == True %}
+				<img src="{% static 'img/pink.png' %}" alt="Travail" height="20"/>
+				{% endif %}	
+				{% if entry.Solidarite == True %}
+				<img src="{% static 'img/orange.png' %}" alt="Solidarite" height="20"/>
+				{% endif %}	
+			
 	<hr />
 	<h5>{{ entry.name }}</h5>
 	<hr />
