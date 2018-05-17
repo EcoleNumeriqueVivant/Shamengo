@@ -8,7 +8,7 @@ class Entry(models.Model):
     name = models.CharField(max_length=100)
     date = models.DateTimeField()
     description = models.TextField()
-    # category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    # category = models.ForeignKey(Category, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -16,11 +16,10 @@ class Entry(models.Model):
 
 
 class Category(models.Model):
-    class Meta:
-        verbose_name_plural = 'categories'
+    # class Meta:
+    #     verbose_name_plural = 'categories'
 
     name = models.CharField(max_length=35)
-    # entry = models.ForeignKey('Entry', on_delete=models.CASCADE)
     color = ColorField(default='#FF0000')
 
     def __str__(self):
