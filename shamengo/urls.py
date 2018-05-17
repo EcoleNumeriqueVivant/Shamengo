@@ -20,7 +20,6 @@ from scheduler import views
 
 urlpatterns = [
     path('', views.calender, name='calendar'),
-    # path('calender', views.calender, name='calender'),
     path('entry/<int:pk>', views.details, name='details'),
     path('admin/', admin.site.urls),
 ]
