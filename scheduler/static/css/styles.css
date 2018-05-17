@@ -22,8 +22,7 @@ body{
   font-family: Open-Sans;
 }
 .card-category{
-  /* background-color: #F0911C; */
-  background-color: #25BCED;
+  background-color: white;
   height: 100px;
 }
 .card-date{
