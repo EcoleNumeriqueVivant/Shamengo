@@ -10,9 +10,14 @@ class Entry(models.Model):
     description = models.TextField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
+    Sante = models.BooleanField(default=False)
+    Environnement = models.BooleanField(default=False)
+    Travail = models.BooleanField(default=False)
+    Solidarite = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
+
 
 
 class Category(models.Model):
