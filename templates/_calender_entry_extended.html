@@ -1,0 +1,26 @@
+{% load static %}
+
+<div class="calender_entry col-lg-4">
+			<br/>			
+
+			<ul class="nav justify-content-end">
+ 				{% if entry.Sante == True %}
+ 				<img src="{% static 'img/blue.png' %}" alt="Sante" height="20"/>
+ 				{% endif %}	
+				{% if entry.Environnement == True %}
+				<img src="{% static 'img/green.png' %}" alt="Environnement" height="20"/>
+				{% endif %}	
+				{% if entry.Travail == True %}
+				<img src="{% static 'img/pink.png' %}" alt="Travail" height="20"/>
+				{% endif %}	
+				{% if entry.Solidarite == True %}
+				<img src="{% static 'img/orange.png' %}" alt="Solidarite" height="20"/>
+				{% endif %}	
+			</ul>
+ 
+			<h4>{{ entry.name }}</h4>
+			<h6>{{ entry.date }}</h6>
+			<p>{{ entry.description|truncatechars:50 }}</P>
+			<button onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn btn-outline-primary btn-sm">View Details</button>
+
+</div>	
