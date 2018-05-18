@@ -6,7 +6,7 @@ from scheduler.models import Entry, Category
 #     return render(request,'index.html', {'entries': entries})
 
 def calender(request):
-    entries = Entry.objects.all()
+    entries = Entry.objects.all().order_by('date')
     return render(request,'calender.html', {'entries': entries})
 
 def details(request, pk):
