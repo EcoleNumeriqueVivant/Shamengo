@@ -1,7 +1,7 @@
 django==2.0.4
 gunicorn
 whitenoise
-colorfield
+django-colorfield
 
 psycopg2
 psycopg2-binary

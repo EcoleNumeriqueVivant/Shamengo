@@ -1,5 +1,7 @@
 from django.db import models
 from colorfield.fields import ColorField
+from datetime import datetime
+
 
 
 
@@ -7,6 +9,7 @@ class Entry(models.Model):
 
     name = models.CharField(max_length=100)
     date = models.DateTimeField()
+    adresse =  models.CharField(max_length=100)
     description = models.TextField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
