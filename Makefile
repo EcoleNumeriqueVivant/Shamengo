@@ -12,6 +12,9 @@ dependencies:
 	yarn install
 	yarn add bower
 
+colorfield:
+	pip3 install django-colorfield
+
 migrate:
 	python3 manage.py migrate
 
