@@ -1,12 +1,10 @@
 from django.shortcuts import render
 from scheduler.models import Entry, Category
+import datetime 
 
-# def index(request):
-#     entries = Entry.objects.all()
-#     return render(request,'index.html', {'entries': entries})
 
 def calender(request):
-    entries = Entry.objects.all().order_by('date')
+    entries = Entry.objects.all().order_by('date_start').exclude(date_end__lt=datetime.datetime.now())
     return render(request,'calender.html', {'entries': entries})
 
 def details(request, pk):

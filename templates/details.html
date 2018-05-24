@@ -1,16 +1,27 @@
 {% extends 'base.html'%}
 
 {% block content%}
+
 <div class="details col-xs-12 ">
-  <div class="details-date-card">
-    <h5>{{ entry.date|date:"d M Y"}}</h5>
+  <div class="card-category" style="background-color:{{entry.Theme.color}};">
+    <h6>Début: {{ entry.date_start|date:"l j F Y - H:i"}}</h6>
+    <h6>Fin: {{ entry.date_end|date:"l j F Y - H:i"}}</h6>
+    <hr/><b>Thématique: {{ entry.Theme.name }}<br/>
+    Catégorie: {{ entry.category.name }}</b>
   </div>
-  <div class="details-card">
-    <h3>{{entry.name}}</h3>
-    <hr/>
-    <div class="details-description">
-      <p>{{entry.description}}</p>
-    </div>
+
+  <div class="container jumbotron">
+  <h3>{{entry.name}}</h3><br>
+  <p>{{entry.description}}</p>
+  <hr/>
+  <p><B>Lieu: </B>{{entry.address}}</p>
+  <p><B>Inscription: </B>{{entry.inscription}}</p>
   </div>
+
+
+  
+<button onclick="window.location='{% url 'calendar' %}'" class="btn-treehouse">Retour</button>
 </div>
 {% endblock %}
+
+

@@ -16,22 +16,27 @@
   </head>
   <body>
     <!-- NavBar Config -->
-    <nav class="navbar navbar-light bg-light">
+
+
+<div>
+    <nav class="navbar navbar-white bg-white">
       <a class="navbar-brand" href="{% url 'calendar' %}">
-        Shamengo
+        <img src="{% static 'img/logo_shamengo.png' %}" alt="logo.jpg" height="60"/>
       </a>
+      <h6>Bienvenue sur le site des évènements Shamengo Bordeaux</h6>
+
       <ul class="nav justify-content-end">
         <li>
           <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-            <option selected>Category...</option>
-            <option value="1">Health</option>
-            <option value="2">Creating</option>
-            <option value="3">Preserving</option>
-            <option value="4">Social</option>
+            <option selected>Thematique...</option>
+            <option value="1">Sante</option>
+            <option value="2">Travail</option>
+            <option value="3">Environnement</option>
+            <option value="4">Solidarite</option>
           </select>
         </li>
         <li class="nav-item">
-          <a class="navbar-brand" href="/admin/login/">LogIn</a>
+          <a class="navbar-brand" href="/admin/login/">Log In</a> 
         </li>
       </ul>
     </nav>

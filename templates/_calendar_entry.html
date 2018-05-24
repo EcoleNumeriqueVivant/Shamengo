@@ -1,16 +1,35 @@
-<div class="calendar_entry col-xs-12 col-sm-6">
+<div class="calender_entry col-lg-4">
   <div class="card">
-    <div class="card-category" style="background-color:{{entry.category.color}};">
+
+    <div class="card-category" style="background-color:{{entry.Theme.color}};">
+      {{ entry.Theme.name }} <hr/>
+      {{ entry.category.name }}
+
       <div class="card-date">
-          <span class="day">{{ entry.date|date:"d"}}</span>
-          <span class="month">{{ entry.date|date:"M"}}</span>
-          <span class="year">{{ entry.date|date:"Y"}}</span>
+          <span class="day">{{ entry.date_start|date:"d"}}</span>
+          <span class="month">{{ entry.date_start|date:"M"}}</span>
+          <span class="year">{{ entry.date_start|date:"Y"}}</span>
+
       </div>
     </div>
     <div class="card-info">
-      <h2 class="card-title">{{ entry.name }}</h2>
-      <p class="card-description">{{ entry.description|truncatechars:200}}</p>
-      <p><button onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn-treehouse">More info</button></p>
+      <h5 class="card-title">{{ entry.name }}</h5>
+      <p class="card-description">{{ entry.description|truncatechars:200}}
+
+      {% if entry.Theme.name == Sante %}
+        <FONT COLOR="blue">Santé</FONT>
+      {% endif %} 
+      {% if entry.Theme.name == Environnement %}
+        <FONT COLOR="green">Environnement</FONT>
+      {% endif %} 
+      {% if entry.Theme == Travail %}
+        <FONT COLOR="pink">Travail</FONT>
+      {% endif %} 
+      {% if entry.Theme == Solidarite %}
+        <FONT COLOR="orange">Solidarité</FONT>
+      {% endif %}
+      </p>
+      <p><button onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn-treehouse">Détails</button></p>
     </div>
   </div>
 </div>
