@@ -3,13 +3,17 @@
 {% block content%}
 <div class="details col-xs-12 ">
   <div class="details-date-card">
-    <h5>{{ entry.date|date:"d M Y"}}</h5>
+    <h5>{{ entry.start_date|date:"d M Y"}}</h5>
   </div>
   <div class="details-card">
     <h3>{{entry.name}}</h3>
     <hr/>
     <div class="details-description">
       <p>{{entry.description}}</p>
+    </div>
+    <hr/>
+    <div class="details-adresse">
+      <p>{{entry.adresse}}</p>
     </div>
   </div>
 </div>

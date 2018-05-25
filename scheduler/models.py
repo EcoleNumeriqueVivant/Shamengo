@@ -8,10 +8,13 @@ from datetime import datetime
 class Entry(models.Model):
 
     name = models.CharField(max_length=100)
-    date = models.DateTimeField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+    published_date = models.DateTimeField(blank=True, null=True)
     adresse =  models.CharField(max_length=100)
     description = models.TextField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
+    published_date = models.DateTimeField(blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     Sante = models.BooleanField(default=False)
     Environnement = models.BooleanField(default=False)
@@ -20,6 +23,10 @@ class Entry(models.Model):
 
     def __str__(self):
         return self.name
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
 
 
 

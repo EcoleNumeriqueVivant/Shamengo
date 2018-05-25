@@ -4,7 +4,8 @@ from datetime import datetime
 
 
 def calender(request):
-    entries = Entry.objects.all().order_by('date').exclude(date = datetime.now())
+    # entries = Entry.objects.all().order_by('date').exclude(date = datetime.now())
+    entries = Entry.objects.all().order_by('start_date').exclude(end_date__lt=datetime.today())
     return render(request,'calender.html', {'entries': entries})
 
 def details(request, pk):

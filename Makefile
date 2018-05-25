@@ -27,4 +27,7 @@ db:
 shell:
 	python3 manage.py shell
 
+superuser:
+	python manage.py createsuperuser
+
 .PHONY: serve migrate install
