@@ -1,11 +1,16 @@
 from django.db import models
 from colorfield.fields import ColorField
 
-
+STATUS_CHOICES = (
+    ('d', 'Draft'),
+    ('p', 'Published'),
+    ('o', 'Offline'),
+)
 
 class Entry(models.Model):
 
     name = models.CharField(max_length=100)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
     date = models.DateTimeField()
     description = models.TextField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
