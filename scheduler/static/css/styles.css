@@ -1,5 +1,6 @@
 body{
   background-color: #E7E7E7;
+  font-family: Titillium web;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 1, 0.2);
@@ -8,24 +9,27 @@ body{
     margin: auto;
     text-align: center;
     position: relative;
-    margin-top: 40px;
+    margin-top: 30px;
 }
-
 .card-title {
-    font-size: 18px;
-    font-family: Titillium;
+    color: black;
+    font-size: 20px;
     margin-top: .75rem;
 }
-.card-description{
+.card-description {
   color: darkgrey;
-  font-size: 12px;
-  font-family: Open-Sans;
+  font-size: 14px;
+  margin-top: .75rem;
 }
-.card-category{
+.card-category {
   background-color: white;
   height: 100px;
+  color: white;
+  font-size: 14px;
+  padding: 0.8em;
+  text-align: right;
 }
-.card-date{
+.card-date {
   position: absolute;
   top: 0;
   left: 0;
@@ -50,7 +54,7 @@ body{
 .mouth,.year {
   font-size: 12px;
 }
-.card-info{
+.card-info {
   height: 200px;
 }
 button {
@@ -68,7 +72,6 @@ button {
   left: 0;
   bottom: 10px;
 }
-
 button:hover, a:hover {
     opacity: 0.9;
 }
@@ -79,32 +82,41 @@ button:hover, a:hover {
     width: 500px;
     height:auto;
     margin: auto;
-    text-align: center;
+    margin-top: 30px;
     position: relative;
-    margin-top: 50px;
     background-color: #FFFF;
+    font-size: 14px;
 }
-.details-date-card{
-  background-color: #778899;
-  color: white;
+.details-card-category {
+  background-color: white;
   padding: 0.8em;
-  font-size: 24px;
-  text-shadow: 2px 3px 2px rgba(black, 0.18);
-  font-weight: 400;
+  color: white;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 70px;
 }
-.details-card{
-  font-family: Titillium;
-  font-size: 18px;
+.details-card-date {
+  background-color: white;
+  padding: 0.8em;
+  color: white;
+  text-align: left;
+  position: relative;
+  width: 250px;
+  height: 70px;
+}
+.details-card {
   background-color: #FFFF;
-  margin-top: 18px;
+  vertical-align: top;
+  height: 400px;
+  padding: 0.8em;
+  color: black;
+  text-align: center;
 }
 .details-card h3{
   font-size: 24px;
+}
 
-}
-.details-description{
-  font-family: Open-sens;
-  font-size: 14px;
-  padding: 3px;
-  margin: 5px;
-}
+
