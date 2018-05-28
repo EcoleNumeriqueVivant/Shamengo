@@ -1,9 +1,9 @@
-<div class="calender_entry col-lg-4">
+<div class="calender_entry col-xs-6 col-sm-4">
   <div class="card">
 
     <div class="card-category" style="background-color:{{entry.Theme.color}};">
-      {{ entry.Theme.name }} <hr/>
-      {{ entry.category.name }}
+      Thématique : {{ entry.Theme.name }}<hr/>
+      Catégorie : {{ entry.category.name }}
 
       <div class="card-date">
           <span class="day">{{ entry.date_start|date:"d"}}</span>
@@ -14,21 +14,7 @@
     </div>
     <div class="card-info">
       <h5 class="card-title">{{ entry.name }}</h5>
-      <p class="card-description">{{ entry.description|truncatechars:200}}
-
-      {% if entry.Theme.name == Sante %}
-        <FONT COLOR="blue">Santé</FONT>
-      {% endif %} 
-      {% if entry.Theme.name == Environnement %}
-        <FONT COLOR="green">Environnement</FONT>
-      {% endif %} 
-      {% if entry.Theme == Travail %}
-        <FONT COLOR="pink">Travail</FONT>
-      {% endif %} 
-      {% if entry.Theme == Solidarite %}
-        <FONT COLOR="orange">Solidarité</FONT>
-      {% endif %}
-      </p>
+      <p class="card-description">{{ entry.description|truncatechars:100}} </p>
       <p><button onclick="window.location='{% url 'details' pk=entry.id %}'" class="btn-treehouse">Détails</button></p>
     </div>
   </div>

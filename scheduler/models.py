@@ -3,10 +3,17 @@ from colorfield.fields import ColorField
 import datetime 
 
 
+STATUS_CHOICES = (
+    ('d', 'Draft'),
+    ('p', 'Published'),
+    ('o', 'Offline'),
+)
+
 
 class Entry(models.Model):
 
     name = models.CharField(max_length=30)
+    status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
     date_start = models.DateTimeField(default=datetime.datetime.now())
     date_end = models.DateTimeField(default=datetime.datetime.now())
     description = models.TextField()
