@@ -9,6 +9,7 @@
     <!-- Bootstrap / CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web" rel="stylesheet">
+ 
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
 
 
@@ -23,16 +24,16 @@
       <a class="navbar-brand" href="{% url 'calendar' %}">
         <img src="{% static 'img/logo_shamengo.png' %}" alt="logo.jpg" height="60"/>
       </a>
-      <h6>Bienvenue sur le site des évènements Shamengo Bordeaux</h6>
+      <h3>Bienvenue sur le site des évènements Shamengo Bordeaux</h3>
 
       <ul class="nav justify-content-end">
         <li>
           <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
             <option selected>Thematique...</option>
-            <option value="1">Sante</option>
+            <option value="1">Santé</option>
             <option value="2">Travail</option>
             <option value="3">Environnement</option>
-            <option value="4">Solidarite</option>
+            <option value="4">Solidarité</option>
           </select>
         </li>
         <li class="nav-item">
