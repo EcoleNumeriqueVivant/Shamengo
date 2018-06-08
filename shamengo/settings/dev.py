@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'colorfield',
+    'geocoder',
 
 ]
 
@@ -126,3 +127,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'scheduler/static'),
 ]
+#Key Google maps api
+# EASY_MAPS_GOOGLE_MAPS_API_KEY = 'AIzaSyBhj5SK32zmUknxCWEqUwW2zFthRFgRUp4'

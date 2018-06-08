@@ -1,17 +1,17 @@
 from django.db import models
 from colorfield.fields import ColorField
 from datetime import datetime
-
-
+import geocoder
+import json
 
 
 class Entry(models.Model):
 
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=200)
     start_date = models.DateField()
     end_date = models.DateField()
     published_date = models.DateTimeField(blank=True, null=True)
-    adresse =  models.CharField(max_length=100)
+    adresse =  models.CharField(max_length=200)
     description = models.TextField()
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     published_date = models.DateTimeField(blank=True, null=True)
@@ -27,6 +27,15 @@ class Entry(models.Model):
     def publish(self):
         self.published_date = timezone.now()
         self.save()
+
+    def geo_address(self):
+        import geocoder
+        g = geocoder.google(self.adresse)
+        g = g.json
+        latlng = g.LatLng
+        return latlng
+
+
 
 
 

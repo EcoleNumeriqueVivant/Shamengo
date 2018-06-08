@@ -3,6 +3,10 @@ gunicorn
 whitenoise
 django-colorfield
 
+
+geocoder
+
+
 psycopg2
 psycopg2-binary
 dj-database-url
