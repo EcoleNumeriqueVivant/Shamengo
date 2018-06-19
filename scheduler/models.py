@@ -29,7 +29,6 @@ class Entry(models.Model):
         self.save()
 
     def geo_address(self):
-        import geocoder
         g = geocoder.google(self.adresse)
         g = g.json
         latlng = g.LatLng
