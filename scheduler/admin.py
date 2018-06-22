@@ -21,6 +21,6 @@ class EntryAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(Entry)
+admin.site.register(Entry, EntryAdmin)
 admin.site.register(Category)
 admin.site.register(Theme)
