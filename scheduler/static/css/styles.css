@@ -96,7 +96,7 @@ button:hover, a:hover {
   top: 0;
   right: 0;
   width: 200px;
-  height: 80px;
+  height: 70px;
 }
 .details-card-date {
   background-color: white;
@@ -105,7 +105,7 @@ button:hover, a:hover {
   text-align: left;
   position: relative;
   width: 300px;
-  height: 80px;
+  height: 70px;
 }
 .details-card {
   background-color: #FFFF;
