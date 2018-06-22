@@ -16,7 +16,7 @@ class Entry(models.Model):
     status = models.CharField(max_length=1, choices=STATUS_CHOICES, default='d')
     date_start = models.DateTimeField(default=datetime.datetime.now())
     date_end = models.DateTimeField(default=datetime.datetime.now())
-    description = models.TextField()
+    description = models.TextField(max_length=450)
     address = models.TextField(default='')
     inscription = models.TextField(default='')
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
